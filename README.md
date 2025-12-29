@@ -96,9 +96,6 @@ The competition uses **MCRMSE**, defined as:
 
 MCRMSE = mean(RMSE_content, RMSE_wording)
 
-yaml
-Copy code
-
 This metric is implemented during validation to monitor performance.
 
 ---
@@ -110,9 +107,6 @@ This metric is implemented during validation to monitor performance.
 ├── data/ # Competition data
 ├── models/ # Saved models (by fold & target)
 ├── README.md
-
-markdown
-Copy code
 
 Key components inside the notebook:
 
