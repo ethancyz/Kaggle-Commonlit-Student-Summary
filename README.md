@@ -131,15 +131,15 @@ Key components inside the notebook:
 ```bash
 git clone https://github.com/ethancyz/Kaggle-Commonlit-Student-Summary
 cd Kaggle-Commonlit-Student-Summary
-2. Install dependencies
-bash
-Copy code
-pip install transformers datasets nltk pyspellchecker scikit-learn accelerate
-3. Train the model
-Run the notebook step by step:
+```
 
-text
-Copy code
+### 2. Install dependencies
+```bash
+pip install transformers datasets nltk pyspellchecker scikit-learn accelerate
+```
+
+### 3. Train the model
+Run the notebook step by step:
 train_single_label_weight_large_v1.ipynb
 The notebook will:
 
@@ -149,13 +149,13 @@ Perform 4-fold GroupKFold cross-validation
 
 Save best models per fold
 
-4. Generate predictions
+### 4. Generate predictions
 The final output will be a submission.csv file in the required Kaggle format:
-
-css
-Copy code
 student_id,content,wording
-📊 Notes & Observations
+
+---
+
+### 📊 Notes & Observations
 Freezing lower layers significantly reduces GPU memory usage
 
 Long input sequences (max_length ≈ 896) improve context coverage but increase training cost
@@ -164,12 +164,14 @@ Group-based CV is critical to avoid prompt-level leakage
 
 Separate modeling of content and wording improves stability
 
-📎 References
+---
+
+### 📎 References
 Kaggle Competition Page
 https://www.kaggle.com/competitions/commonlit-evaluate-student-summaries
 
 HuggingFace Transformers
 https://huggingface.co/docs/transformers
 
-📜 License
+### 📜 License
 This project is intended for educational and research purposes.
